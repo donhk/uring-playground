@@ -1,7 +1,7 @@
 [workspace]
 members = [
     "common",
-    "block-device",
+    "log-device",
     "repository"
 ]
 
