@@ -1,1 +1,1 @@
-mod tokio_uring_device;
+pub mod tokio_uring;
