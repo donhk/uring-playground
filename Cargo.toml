@@ -1,5 +1,6 @@
 [workspace]
 members = [
+    "common",
     "block-device",
     "repository"
 ]
@@ -13,3 +14,4 @@ bytes = "1.6"
 thiserror = "2.0.12"
 async-trait = "0.1.88"
 uuid = { version = "1.17.0", features = ["v4"] }
+derive_builder = "0.12"

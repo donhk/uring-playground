@@ -1,14 +1,6 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+mod api;
+mod backends;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+pub use api::types::Offset;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+pub use api::block_device::LogDevice;

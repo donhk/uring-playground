@@ -8,4 +8,5 @@ async-trait.workspace = true
 thiserror.workspace = true
 bytes.workspace = true
 uuid.workspace = true
+derive_builder.workspace = true
 

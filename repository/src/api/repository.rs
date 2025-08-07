@@ -23,7 +23,7 @@ pub trait Repository {
 
     async fn state(&self) -> RepositoryResult<RepositoryState>;
 
-    async fn update_state(&self) -> RepositoryResult<RepositoryState>;
+    async fn update_state(&self, state: RepositoryState) -> RepositoryResult<RepositoryState>;
 
     async fn bytes(&self) -> RepositoryResult<BytesNumber>;
 

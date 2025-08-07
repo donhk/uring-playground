@@ -1,4 +1,5 @@
 mod api;
+mod backends;
 
 pub use api::catalog::{
     DeleteChunkReq, DeleteChunkResp, ReadChunkReq, ReadChunkResp, RepositoryState, WriteChunkReq,
@@ -13,3 +14,5 @@ pub use api::types::{
     BytesNumber, ChunkId, ChunksNumber, RDataChunkResp, RDeleteChunkResp, RReadChunkResp,
     RepositoryId, RepositoryResult, RequestId,
 };
+
+pub use backends::v1::repository::RepositoryV1;
