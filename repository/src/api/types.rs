@@ -18,3 +18,7 @@ pub type RepositoryId = Uuid;
 pub type BytesNumber = u64;
 
 pub type ChunksNumber = u64;
+
+pub type LogId = u64;
+
+pub type Offset = u64;

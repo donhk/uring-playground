@@ -1,4 +1,4 @@
-use crate::{ChunkId, RepositoryId};
+use crate::{ChunkId, LogId, Offset, RepositoryId};
 use bytes::Bytes;
 
 #[derive(Debug, Default, Clone)]
@@ -40,3 +40,13 @@ pub struct DeleteChunkReq {
 
 #[derive(Debug, Default, Clone)]
 pub struct DeleteChunkResp {}
+
+#[derive(Debug, Default, Clone, Copy)]
+pub struct ChunkMetadata {
+    pub chunk_id: ChunkId,
+    pub log_id: LogId,
+    pub offset: Offset,
+    pub len: u32,
+    pub is_deleted: bool,
+    pub timestamp: u64,
+}

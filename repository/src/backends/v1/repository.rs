@@ -1,7 +1,8 @@
 use crate::backends::v1::config::RepoConfig;
 use crate::{
-    BytesNumber, ChunksNumber, DeleteChunkReq, RDataChunkResp, RDeleteChunkResp, RReadChunkResp,
-    ReadChunkReq, Repository, RepositoryResult, RepositoryState, RequestId, WriteChunkReq,
+    BytesNumber, ChunkMetadata, ChunksNumber, DeleteChunkReq, LogId, RDataChunkResp,
+    RDeleteChunkResp, RReadChunkResp, ReadChunkReq, Repository, RepositoryResult, RepositoryState,
+    RequestId, WriteChunkReq,
 };
 use async_trait::async_trait;
 
@@ -56,6 +57,15 @@ impl Repository for RepositoryV1 {
     }
 
     async fn chunks_count(&self) -> RepositoryResult<ChunksNumber> {
+        todo!()
+    }
+
+    async fn list_chunks_metadata(
+        &self,
+        _start_after: Option<LogId>,
+        _include_deleted: bool,
+        _limit: Option<usize>,
+    ) -> RepositoryResult<Vec<ChunkMetadata>> {
         todo!()
     }
 }
